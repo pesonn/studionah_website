@@ -4,7 +4,9 @@ var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHei
 
 var renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor("#f5f5f5")
+renderer.setClearColor("#f5f5f5");
+renderer.setPixelRatio(2);
+
 document.body.appendChild(renderer.domElement);
 
 
@@ -23,7 +25,7 @@ var controls = new THREE.OrbitControls(camera);
 
 controls.enableZoom = false;
 controls.enabelDumping = true;
-controls.autoRotate = true;
+controls.autoRotate = false;
 
 var loader = new THREE.FontLoader();
 loader.load("/fonts/helvetiker_regular.typeface.json", function(font) {
