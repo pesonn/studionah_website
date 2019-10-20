@@ -27,7 +27,12 @@ p {
 .nav__point__text {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 2rem;
+  color: black;
+  text-decoration-line: none;
+}
 
+.nav__point__text:visited {
+  color: black;
 }
 
 .nav__point  {
