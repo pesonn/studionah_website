@@ -1,14 +1,13 @@
 
 var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1200);
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 600);
 
 var renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor("#f5f5f5");
-renderer.setPixelRatio(2);
+renderer.setPixelRatio(1.55);
 
 document.body.appendChild(renderer.domElement);
-
 
 
 
@@ -19,20 +18,31 @@ window.addEventListener("resize", () => {
   camera.updateProjectionMatrix();
 });
 
-camera.position.z = 500;
 
-var controls = new THREE.OrbitControls(camera);
+camera.position.z = 400;
 
-controls.enableZoom = false;
-controls.enabelDumping = true;
-controls.autoRotate = false;
+// /* ORBIT CONTROLS */
+
+// var controls = new THREE.OrbitControls(camera);
+// controls.enableZoom = false;
+// controls.enabelDumping = true;
+// controls.autoRotate = false;
+
+
+/* TRACKBALL CONTROLS */
+
+var controls = new THREE.TrackballControls(camera);
+
+
+
+
 
 var loader = new THREE.FontLoader();
 loader.load("/fonts/helvetiker_regular.typeface.json", function(font) {
 
   var text = new THREE.TextGeometry("studio nah", {
     font: font,
-    size: 80,
+    size: 60,
     height: 12,
   });
 
@@ -44,6 +54,7 @@ loader.load("/fonts/helvetiker_regular.typeface.json", function(font) {
   text.center();
    
 });
+
 
 function animate() {
   requestAnimationFrame(animate);
