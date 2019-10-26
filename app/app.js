@@ -38,7 +38,7 @@ var controls = new THREE.TrackballControls(camera);
 
 
 var loader = new THREE.FontLoader();
-loader.load("/fonts/helvetiker_regular.typeface.json", function(font) {
+loader.load("fonts/helvetiker_regular.typeface.json", function(font) {
 
   var text = new THREE.TextGeometry("studio nah", {
     font: font,
