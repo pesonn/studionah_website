@@ -83,8 +83,5 @@ footer {
 }
 
 footer a {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 0.8em;
-  color: black;
-  text-decoration-line: none;
+  font-size: 0.6rem;
 }
