@@ -12,10 +12,13 @@ body {
 h1, h2, h3, h4, h5, h6, a, p {
   margin: 0;
   padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: termina, Helvetica, Arial, sans-serif;
+  font-size: normal;
+  font-weight: 500;
   color: black;
   text-decoration-line: none;
 }
+
 
 
 
@@ -32,15 +35,16 @@ canvas {
 
 
 
+
 /*---------------------------------------------------------------------------*/
 /*------------------------------  NAVIGATION  -------------------------------*/
 /*---------------------------------------------------------------------------*/
 
 .nav {
   position: fixed;
-  width: 90vw;
-  left: 5vw;
-  top: 5vh;
+  width: 100vw;
+  left: 0vw;
+  top: 2vh;
   height: 90vh;
   z-index: 10000;
   display: flex;
@@ -49,7 +53,7 @@ canvas {
 }
 
 .nav__point__text {
-  font-size: 2rem;
+  font-size: 1.3em;
 }
 
 .nav__point__text:visited {
@@ -62,15 +66,38 @@ canvas {
 
 #nav__left {
   position: relative;
-  top: 50vh;
+  top: 48vh;
   transform: rotate(-90deg);
 }
 
 #nav__right {
   position: relative;
-  top: 50vh;
+  top: 47vh;
   transform: rotate(90deg);
 }
+
+
+
+
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------------  HEADER  --------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+.einleitungstext {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+}
+.einleitungstext p {
+  padding: 0 5vw 0 5vw;
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+
+
+
 
 /*---------------------------------------------------------------------------*/
 /*---------------------------------  FOOTER  --------------------------------*/
@@ -79,9 +106,9 @@ canvas {
 footer {
   position: fixed;
   bottom: 0.5%;
-  left: 0.5%;
+  left: 1.0%;
 }
 
 footer a {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
