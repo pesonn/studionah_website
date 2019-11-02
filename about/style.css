@@ -1,0 +1,64 @@
+.uberuns {
+  display: grid;
+  grid-template-columns: 12% 1fr 5% 1fr 12%;
+  grid-template-rows: 10% 90vh 10%;
+  grid-template-areas: 
+  ". . . . ."
+  ". besch . leist ."
+  ". . . . .";
+  margin: 0;
+  padding: 0;
+}
+
+.beschreibung {
+  grid-area: besch;
+  margin-bottom: 10%
+}
+
+.leistungen {
+  grid-area: leist;
+}
+
+.uberuns h1 {
+  margin-bottom: 5%;
+}
+
+.beschreibung__text {
+  font-weight: 400; 
+  margin-bottom: 3%;
+}
+
+.uberuns h3, .uberuns li {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .uberuns {
+    grid-template-columns: 12% 1fr 3% 1fr 9%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .uberuns {
+    grid-template-columns: 12% 1fr 12%;
+    grid-template-rows: 12% 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". besch ."
+    ". leist .";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .uberuns {
+    grid-template-columns: 19% 1fr 15%;
+    grid-template-rows: 5vh 1fr 1fr;
+    grid-template-areas: 
+    ". . ."
+    ". besch ."
+    ". leist .";
+  }
+
+}
+
