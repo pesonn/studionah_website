@@ -16,35 +16,37 @@
 
 <body>
 
-  <aside class="nav"> 
-    <div class="nav__point nav__item nav__item--position--left" id="nav__left" >
-      <a class="nav__point__text nav__link" href="/about/index.html">Über uns</a>
-    </div>
-    <div class="nav__point nav__item nav__item--position--top" id="nav__top">
-      <a href="../index.html" class="nav__point__text  nav__link">Willkommen</a>
-      <div id="nav__top--block"></div>
-    </div>
-    <div class="nav__point nav__item--position--right" id="nav__right">
-      <a href="mailto:hallo@studionah.de" class="nav__point__text  nav__link">Kontakt</a>
-    </div>
-  </aside>
+  <div class="grid-wrapper">
+     
+    <aside class="nav__point nav__item nav__item--position--left"  id="nav__left" >
+      <a class="headline nav__link" href="/about/index.html">Über uns</a>
+    </aside>
+    <aside class="nav__point nav__item nav__item--position--top" id="nav__top">
+      <a href="../index.html" class="headline nav__link nav__link--position--top">Willkommen</a>
+    </aside>
+    <aside class="nav__point nav__item nav__item--position--right" id="nav__right">
+      <a href="mailto:hallo@studionah.de" class="headline nav__link">Kontakt</a>
+    </aside>
+    <main class="grid-main"></main>
+    <header class="einleitungstext">
+      <p>Aus dem Herzen Hannovers entwickeln und gestalten wir leidenschaftlich 
+        nachhaltige Konzepte für Webdesign, Corporte Design und Grafikdesign 
+        aller Art, egal ob print oder digital.
+      </p>
+    </header>
 
-  <header class="einleitungstext">
-    <p>Aus dem Herzen Hannovers entwickeln und gestalten wir leidenschaftlich 
-      nachhaltige Konzepte für Webdesign, Corporte Design und Grafikdesign 
-      aller Art, egal ob print oder digital.
-    </p>
-  </header>
+    <footer class="footer">
+      <a class="footer__link" href="/impressum/index.html">Impressum</a>
+      <a class="footer__link" href="/datenschutz/index.html">Datenschutz</a>
+    </footer>
 
-  <footer>
-    <a href="/impressum/index.html">Impressum</a>
-    <a href="/datenschutz/index.html">Datenschutz</a>
-  </footer>
+  </div>
 
-  <!-- <script src="app/three.min.js"></script> -->
+
+  <!-- <script src="app/three.min.js"></script>
   <script src="app/OrbitControls.js"></script>
   <script src="app/TrackballControls_auto.js"></script>
-  <script src="app/app.js"></script>
+  <script src="app/app.js"></script> -->
 
   
 </body>

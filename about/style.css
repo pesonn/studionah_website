@@ -1,5 +1,6 @@
 .uberuns {
-  display: grid;
+  grid-area: main;
+  /* display: grid;
   grid-template-columns: 12% 1fr 5% 1fr 12%;
   grid-template-rows: 10% 90vh 10%;
   grid-template-areas: 
@@ -7,7 +8,7 @@
   ". besch . leist ."
   ". . . . .";
   margin: 0;
-  padding: 0;
+  padding: 0; */
 }
 
 .beschreibung {
