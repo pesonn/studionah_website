@@ -1,6 +1,5 @@
 
-// TODO: Fenstergröße auf .grid-main beziehen nicht auf Fenstergröße
-
+// Fenstergröße auf .grid-main beziehen nicht auf Fenstergröße
 var gridmain = document.querySelector(".grid-main"); 
 
 var scene = new THREE.Scene();
@@ -14,7 +13,7 @@ renderer.setPixelRatio(1.55);
 gridmain.appendChild(renderer.domElement);
 
 
-
+// muss auf window bleiben, da dieses die Größe steuert
 window.addEventListener("resize", () => {
   renderer.setSize(gridmain.clientWidth, gridmain.clientHeight);
   camera.aspect = gridmain.clientWidth / gridmain.clientHeight;
@@ -36,9 +35,6 @@ camera.position.z = 400;
 /* TRACKBALL CONTROLS */
 
 var controls = new THREE.TrackballControls(camera);
-
-
-
 
 
 var loader = new THREE.FontLoader();
