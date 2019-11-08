@@ -1,4 +1,3 @@
-/* TODO: Burgermenu ab 650px */
 
 /*---------------------------------------------------------------------------*/
 /*-------------------------------  ALLGEMEIN  -------------------------------*/
@@ -106,6 +105,7 @@ ul li {
 /*---------------------------------------------------------------------------*/
 
 
+
 .headline {
   font-size: 1.0rem;
 }
@@ -116,7 +116,34 @@ ul li {
 
 .nav__item  {
   height: fit-content;
+ 
 }
+
+.nav__link::after,
+.nav__link::after, 
+.nav__link::after {
+  content:"";
+  position: absolute;
+  display:block;
+  width: 0%;
+  left:0;
+  border-bottom: 2px solid #000;
+  transition: 0.4s ease;
+
+}
+
+.nav__link:hover::after,
+.nav__link:first-child:hover::after, 
+.nav__link:last-child:hover::after,
+.nav__link:hover::after {
+  width:100%;
+
+}
+
+.nav__link:not(:first-child):not(:last-child):hover::after {
+  width: 120px;
+}
+
 
 .nav__item--position--left {
   grid-area: navleft;
@@ -151,6 +178,20 @@ ul li {
   transform: rotate(90deg);
   white-space: nowrap;
 }
+
+
+/*---------------------------------------------------------------------------*/
+/*---------------------------  NAVIGATION - BURGER  -------------------------*/
+/*---------------------------------------------------------------------------*/
+/* TODO: Burgermenu ab 650px */
+
+/*
+- .grid-nav bestehen lassen
+- .nav__points ausblenden
+
+
+
+*/
 
 
 
@@ -260,7 +301,6 @@ canvas {
   align-self: center;
   display: flex;
   justify-content: space-evenly;
-  /* align-items: center; */
   flex-wrap: nowrap;
 
 }
