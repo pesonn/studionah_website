@@ -1,23 +1,30 @@
 .uberuns {
   grid-area: main;
-  /* display: grid;
-  grid-template-columns: 12% 1fr 5% 1fr 12%;
-  grid-template-rows: 10% 90vh 10%;
-  grid-template-areas: 
-  ". . . . ."
-  ". besch . leist ."
-  ". . . . .";
-  margin: 0;
-  padding: 0; */
+  align-self: center;
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  flex-wrap: nowrap;
+
 }
 
 .beschreibung {
   grid-area: besch;
-  margin-bottom: 10%
+  margin-bottom: 10%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 45%;
 }
 
 .leistungen {
   grid-area: leist;
+  flex-grow: 1;
+  flex-shrink: 1;
+  
+}
+
+.flex-block {
+  width: 15%;
 }
 
 .uberuns h1 {
@@ -30,36 +37,20 @@
 }
 
 .uberuns h3, .uberuns li {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 870px) {
   .uberuns {
-    grid-template-columns: 12% 1fr 3% 1fr 9%;
+    flex-wrap: wrap;
   }
 
-}
-
-@media screen and (max-width: 900px) {
-  .uberuns {
-    grid-template-columns: 12% 1fr 12%;
-    grid-template-rows: 12% 1fr 1fr;
-    grid-template-areas: 
-    ". . ."
-    ". besch ."
-    ". leist .";
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .uberuns {
-    grid-template-columns: 19% 1fr 15%;
-    grid-template-rows: 5vh 1fr 1fr;
-    grid-template-areas: 
-    ". . ."
-    ". besch ."
-    ". leist .";
+  .beschreibung, .leistungen {
+    flex-grow: 1;
   }
 
+  .flex-block {
+    display: none;
+  }
 }
 

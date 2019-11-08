@@ -1,4 +1,8 @@
 
+// TODO: Fenstergröße auf .grid-main beziehen nicht auf Fenstergröße
+
+let gridmain = document.querySelector(".grid-main"); 
+
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 600);
 
@@ -7,7 +11,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor("#f5f5f5");
 renderer.setPixelRatio(1.55);
 
-document.body.appendChild(renderer.domElement);
+let gridwrapper = document.querySelector(".grid-wrapper");
+gridwrapper.appendChild(renderer.domElement);
 
 
 
