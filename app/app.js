@@ -52,7 +52,7 @@ loader.load("fonts/helvetiker_regular.typeface.json", function(font) {
 
   text.scale
 
-  var textMaterial = new THREE.MeshBasicMaterial({color: 0x000});
+  var textMaterial = new THREE.MeshBasicMaterial({color: 0x353535, reflectivity: 0});
   var mesh = new THREE.Mesh(text, textMaterial);
   scene.add(mesh);
   text.center();
