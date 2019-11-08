@@ -9,7 +9,6 @@
 }
 
 .beschreibung {
-  grid-area: besch;
   margin-bottom: 10%;
   flex-grow: 1;
   flex-shrink: 1;
@@ -17,10 +16,9 @@
 }
 
 .leistungen {
-  grid-area: leist;
   flex-grow: 1;
   flex-shrink: 1;
-  
+  margin-right: 10%;
 }
 
 .flex-block {
@@ -29,6 +27,10 @@
 
 .uberuns h1 {
   margin-bottom: 5%;
+}
+
+.beschreibung__titel {
+  white-space: nowrap;
 }
 
 .beschreibung__text {
@@ -40,9 +42,10 @@
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 800px) {
   .uberuns {
     flex-wrap: wrap;
+     
   }
 
   .beschreibung, .leistungen {
