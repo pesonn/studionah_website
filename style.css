@@ -190,6 +190,7 @@ canvas {
 
 footer {
   grid-area: footer;
+  place-self: flex-end;
   z-index: 9999999;
   position: absolute;
   bottom: 10px;
