@@ -119,8 +119,7 @@ ul li {
  
 }
 
-.nav__link::after,
-.nav__link::after, 
+ 
 .nav__link::after {
   content:"";
   position: absolute;
@@ -132,7 +131,6 @@ ul li {
 
 }
 
-.nav__link:hover::after,
 .nav__link:first-child:hover::after, 
 .nav__link:last-child:hover::after,
 .nav__link:hover::after {
