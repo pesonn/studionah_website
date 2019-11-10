@@ -79,7 +79,7 @@ burgerMenuIcon.addEventListener("click", () => {
       gridNavBurger.appendChild(navItems[2]);
       gridNavBurger.removeChild(burgerOverlay); 
       console.log("2") 
-    }, 250);
+    }, 1100);
 
 
     window.setTimeout( () => {
