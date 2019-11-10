@@ -1,22 +1,26 @@
-const gridNavBurger = document.querySelector(".grid-nav-burger");
+var gridNavBurger = document.querySelector(".grid-nav-burger");
 
-const burgerMenuIcon = document.querySelector(".burger-menu");
+var burgerMenuIcon = document.querySelector(".burger-menu");
 
-const burgerMenuLines = document.querySelectorAll(".line");
+var burgerMenuLines = document.querySelectorAll(".line");
 
-const navItems = document.querySelectorAll(".nav__item");
+var navItems = document.querySelectorAll(".nav__item");
+
+
+
+
 
 burgerMenuIcon.addEventListener("click", () => {
-
-  const burgerOverlay =  document.querySelector(".burger-nav__overlay");
-  const burgerNavOverlay = document.createElement("div");
+  var burgerOverlay =  document.querySelector(".burger-nav__overlay");
+  var burgerNavOverlay = document.createElement("div");
+  
   burgerNavOverlay.setAttribute("class", "burger-nav__overlay");
   //Wechsel zwischen erstellen und löschen
 
   if (!burgerOverlay) {
   console.log("Yummy Burger!");
     // DIV .burger-nav__Overlay erstellen
-  burgerNavOverlay.setAttribute("class", "burger-nav__overlay");
+    burgerNavOverlay.setAttribute("class", "burger-nav__overlay");
 
   // alle benötigten Klassen in DIV verschieben
 
@@ -40,7 +44,7 @@ burgerMenuIcon.addEventListener("click", () => {
     burgerMenuLines[0].classList.add("burger-fadein-2__line1");
     burgerMenuLines[1].classList.add("burger-fadein-2__line2");
     burgerMenuLines[2].classList.add("burger-fadein-2__line3");
-  }, 1200)
+  }, 1100)
   }
   else {
     console.log("Klick nicht so viel!");
@@ -100,4 +104,45 @@ burgerMenuIcon.addEventListener("click", () => {
     
   };
 
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 649) {
+    let burgerOverlay =  document.querySelector(".burger-nav__overlay");
+
+    burgerMenuLines[0].classList.remove("burger-fadein-1__line1");
+    burgerMenuLines[1].classList.remove("burger-fadein-1__line2");
+    burgerMenuLines[2].classList.remove("burger-fadein-1__line3");
+    burgerMenuLines[0].classList.remove("burger-fadein-2__line1");
+    burgerMenuLines[1].classList.remove("burger-fadein-2__line2");
+    burgerMenuLines[2].classList.remove("burger-fadein-2__line3");
+    burgerMenuLines[0].classList.remove("burger-fadeout-1__line1");
+    burgerMenuLines[1].classList.remove("burger-fadeout-1__line2");
+    burgerMenuLines[2].classList.remove("burger-fadeout-1__line3");
+    burgerMenuLines[0].classList.remove("burger-fadeout-2__line1");
+    burgerMenuLines[1].classList.remove("burger-fadeout-2__line2");
+    burgerMenuLines[2].classList.remove("burger-fadeout-2__line3");
+
+    
+    gridNavBurger.appendChild(burgerMenuIcon);
+    gridNavBurger.appendChild(navItems[0]);
+    gridNavBurger.appendChild(navItems[1]);
+    gridNavBurger.appendChild(navItems[2]);
+
+    if(!burgerOverlay) {
+      console.log("jetzt123");
+    }
+    else {
+      
+      burgerOverlay.classList.remove("overlay-fadein"); 
+      burgerOverlay.classList.remove("overlay-fadeout"); 
+      gridNavBurger.removeChild(burgerOverlay);
+      console.log("jetzt");
+    }
+   
+    
+  }
+  else {
+
+  };
 });

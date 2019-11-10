@@ -416,7 +416,7 @@ ul li {
     /* animation-delay: 0.5s; */
   }
   .burger-fadein-2__line1 {
-    animation: burger-fadein-2__line1 0.75s ease-out forwards;
+    animation: burger-fadein-2__line1 0.5s ease-out forwards;
     /* animation-delay: 0.5s; */
   }
 
@@ -452,7 +452,7 @@ ul li {
     /* animation-delay: 0.5s; */
   }
   .burger-fadein-2__line2 {
-    animation: burger-fadein-2__line2 0.75s ease-out forwards;
+    animation: burger-fadein-2__line2 0.5s ease-out forwards;
     /* animation-delay: 0.5s; */
   }
   
@@ -500,7 +500,7 @@ ul li {
   }
 
   .burger-fadein-2__line3 {
-    animation: burger-fadein-2__line3 0.75s ease-out forwards ;
+    animation: burger-fadein-2__line3 0.5s ease-out forwards ;
     /* animation-delay: 0.5s; */
   }
 
