@@ -340,12 +340,12 @@ ul li {
     }
 
     60% {
-      top: 2%;
+      top: 25px;
       opacity: 1;
     }
 
     80% {
-      top: -1%;
+      top: -10px;
     }
 
     100% {

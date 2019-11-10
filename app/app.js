@@ -79,7 +79,7 @@ burgerMenuIcon.addEventListener("click", () => {
       gridNavBurger.appendChild(navItems[2]);
       gridNavBurger.removeChild(burgerOverlay); 
       console.log("2") 
-    }, 1100);
+    }, 1000);
 
 
     window.setTimeout( () => {
@@ -90,7 +90,7 @@ burgerMenuIcon.addEventListener("click", () => {
       burgerMenuLines[1].classList.add("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.add("burger-fadeout-2__line3");
       console.log("3")
-    }, 1200);
+    }, 1100);
 
     window.setTimeout( () => {
       burgerMenuLines[0].classList.remove("burger-fadeout-2__line1");
