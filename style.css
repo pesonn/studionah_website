@@ -336,14 +336,16 @@ ul li {
   @keyframes overlay-fadein {
     0% {
       top: -100vh;
+      opacity: 0;
     }
 
     60% {
-      top: 3%;
+      top: 2%;
+      opacity: 1;
     }
 
     80% {
-      top: -2%;
+      top: -1%;
     }
 
     100% {
@@ -353,7 +355,7 @@ ul li {
   }
 
   .overlay-fadein {
-    animation: overlay-fadein 0.9s ease-in-out forwards;
+    animation: overlay-fadein 0.9s cubic-bezier(.62,.5,.3,1.14) forwards;
   }
 
   @keyframes overlay-fadeout {
@@ -361,14 +363,23 @@ ul li {
       top: 0;
     }
 
+    10% {
+      opacity: 1;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
     100% {
       top: -100vh;
+      opacity: 0;
     }
 
   }
 
   .overlay-fadeout {
-    animation: overlay-fadeout 0.5s ease-out forwards;
+    animation: overlay-fadeout 0.5s cubic-bezier(0.4, 0.0, 1, 1) forwards;
   }
 
 

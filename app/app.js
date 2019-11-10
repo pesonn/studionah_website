@@ -90,14 +90,14 @@ burgerMenuIcon.addEventListener("click", () => {
       burgerMenuLines[1].classList.add("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.add("burger-fadeout-2__line3");
       console.log("3")
-    }, 250);
+    }, 1200);
 
     window.setTimeout( () => {
       burgerMenuLines[0].classList.remove("burger-fadeout-2__line1");
       burgerMenuLines[1].classList.remove("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.remove("burger-fadeout-2__line3");
       console.log("4")
-    }, 1000);
+    }, 2000);
 
 
     
