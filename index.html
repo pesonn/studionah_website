@@ -16,17 +16,27 @@
 
 <body>
 
-  <div class="grid-nav">
-    <aside class="nav__point nav__item nav__item--position--left"  id="nav__left" >
-      <a class="headline nav__link nav__link--position--left" href="/about/index.html">Über uns</a>
-    </aside>
-    <aside class="nav__point nav__item nav__item--position--top" id="nav__top">
-      <a href="../index.html" class="headline nav__link nav__link--position--top">Willkommen</a>
-    </aside>
-    <aside class="nav__point nav__item nav__item--position--right" id="nav__right">
-      <a href="mailto:hallo@studionah.de" class="headline nav__link">Kontakt</a>
-    </aside>
-  </div> 
+  <div class="grid-nav grid-nav-burger">
+      <div class="nav-burger-logo">
+        <h1 class="nav-burger-logo__text">studio nah</h1>
+      </div>
+      <div class="nav-burger-border"></div>
+    <!-- hier wird durch JS <div class="burger-nav__overlay"> eingefügt -->
+      <div class="burger-menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </div>
+      <aside class="nav__point nav__item nav__item--position--left burger-nav__point"  id="nav__left" >
+        <a class="headline nav__link nav__link--position--left" href="/about/index.html">Über uns</a>
+      </aside>
+      <aside class="nav__point nav__item nav__item--position--top burger-nav__point" id="nav__top">
+        <a href="../index.html" class="headline nav__link nav__link--position--top">Willkommen</a>
+      </aside>
+      <aside class="nav__point nav__item nav__item--position--right burger-nav__point" id="nav__right">
+        <a href="mailto:hallo@studionah.de" class="headline nav__link">Kontakt</a>
+      </aside>
+    </div> 
 
   <div class="grid-wrapper">
     <main class="grid-main"></main>
@@ -46,8 +56,8 @@
   <!-- <script src="app/three.min.js"></script>
   <script src="app/OrbitControls.js"></script>
   <script src="app/TrackballControls_auto.js"></script>
-  <script src="app/app-animation.js"></script> 
-  <script src="app/app.js"></script> -->
+  <script src="app/app-animation.js"></script> --> 
+  <script src="app/app.js"></script> 
 
   
 </body>
