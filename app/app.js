@@ -15,12 +15,32 @@ var footer = document.querySelector(".footer");
 
 var footerHaupt = document.querySelector(".footer-haupt");
 
+
 // To Detect if Iphone is used
+
+
+// Dieser Wrapper wird nur auf der Hauptseite benötigt, dort ist die Footer Klasse zusätzlich "footer-haupt" bezeichnet. Daher muss erst geprüft werden, ob diese Klasse wirklich vorhanden ist.
+var addFooterHauptWrapper = function () {
+  if (footerHaupt != null) {
+    return footerHaupt.classList.add("ios__grid-wrapper-footer");
+  }
+  else {
+    
+  }
+}
+
+var removeFooterHauptWrapper = function () {
+  if (footerHaupt != null) {
+    return footerHaupt.classList.remove("ios__grid-wrapper-footer");
+  }
+  else {
+
+  }
+}
 
 var iosDeviceWrapper = function () {
   if(navigator.userAgent.match(/i(Phone|Pod|Pad)/i)) {
-    console.log("ios")
-    footerHaupt.classList.add("ios__grid-wrapper-footer");
+    addFooterHauptWrapper();
   }else {
    
   }
@@ -29,6 +49,8 @@ var iosDeviceWrapper = function () {
 
 iosDeviceWrapper();
 
+
+// wird auf allen Seiten benötigt, da es überall den Overlay gibt
 var iosDeviceOverlay = function () {
   if(navigator.userAgent.match(/i(Phone|Pod|Pad)/i)) {
     console.log("ios")
@@ -38,6 +60,9 @@ var iosDeviceOverlay = function () {
   }
 
 }
+
+
+
 
 
 
@@ -70,7 +95,8 @@ burgerMenuIcon.addEventListener("click", () => {
     burgerNavOverlay.appendChild(navItems[1]);
     burgerNavOverlay.appendChild(navItems[2]);
     burgerNavOverlay.appendChild(footer);
-    footer.classList.remove("ios__grid-wrapper-footer");
+    removeFooterHauptWrapper();
+    // footerHaupt.classList.remove("ios__grid-wrapper-footer");
     iosDeviceOverlay(); 
     gridNavBurger.appendChild(burgerNavOverlay);
 
@@ -97,7 +123,8 @@ burgerMenuIcon.addEventListener("click", () => {
     burgerMenuLines[1].classList.add("burger-fadeout-1__line2");
     burgerMenuLines[2].classList.add("burger-fadeout-1__line3");
     footer.classList.remove("ios__burger-nav-overlay-footer");
-    footer.classList.add("ios__grid-wrapper-footer");
+    addFooterHauptWrapper();
+    // footerHaupt.classList.add("ios__grid-wrapper-footer");
     gridWrapper.appendChild(footer);
     console.log("0")
 
@@ -172,6 +199,7 @@ window.addEventListener("resize", () => {
     gridNavBurger.appendChild(navItems[1]);
     gridNavBurger.appendChild(navItems[2]);
     gridWrapper.appendChild(footer);
+    removeFooterHauptWrapper();
 
     if(!burgerOverlay) {
       console.log("jetzt123");
