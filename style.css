@@ -245,6 +245,7 @@ ul li {
 
   .--overflow--hidden, #body--overflow--hidden {
     overflow: hidden;
+    user-select: none;
   }
 
   .nav-burger-logo {
