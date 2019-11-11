@@ -123,7 +123,7 @@ burgerMenuIcon.addEventListener("click", () => {
     burgerMenuLines[1].classList.add("burger-fadeout-1__line2");
     burgerMenuLines[2].classList.add("burger-fadeout-1__line3");
     footer.classList.remove("ios__burger-nav-overlay-footer");
-    addFooterHauptWrapper();
+    iosDeviceWrapper();
     // footerHaupt.classList.add("ios__grid-wrapper-footer");
     gridWrapper.appendChild(footer);
     console.log("0")
