@@ -806,6 +806,11 @@ canvas {
   
 }
 
+@media screen and (max-width: 770px) {
+  .einleitungstext p {
+    text-align: justify;
+  }
+}
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
