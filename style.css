@@ -219,6 +219,11 @@ ul li {
 
 @media screen and (max-width: 650px) {
 
+  html {
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
   .nav__point {
     display: none;
   }
@@ -246,6 +251,7 @@ ul li {
   .--overflow--hidden, #body--overflow--hidden {
     overflow: hidden;
     user-select: none;
+    -webkit-user-select: none;
   }
 
   .nav-burger-logo {
@@ -759,6 +765,8 @@ footer a {
 .grid-main {
   grid-area: main;
   height: 70vh;
+  user-select: none;
+  -webkit-user-select: none;
 
 }
 
@@ -783,6 +791,8 @@ footer a {
 
 canvas {
   user-select: none;
+  -webkit-user-select: none;
+
   width: 80%;
   height: 100%;
 }
