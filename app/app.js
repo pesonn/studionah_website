@@ -107,7 +107,7 @@ burgerMenuIcon.addEventListener("click", () => {
     burgerMenuLines[0].classList.add("burger-fadein-2__line1");
     burgerMenuLines[1].classList.add("burger-fadein-2__line2");
     burgerMenuLines[2].classList.add("burger-fadein-2__line3");
-  }, 1100)
+  }, 850)
   }
   else {
     console.log("Klick nicht so viel!");
