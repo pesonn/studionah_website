@@ -86,7 +86,7 @@ ul li {
   top: 0;
   left: 0;
   display: grid;
-  width: 99%;
+  width: 100%;
   height: 100vh;
   height: -webkit-fill-available;
   grid-template-columns: 3% 10% 1fr 10% 3%;
@@ -129,10 +129,20 @@ ul li {
   ". . . footer footer"; 
 } 
 
+
+
 @media screen and (max-width: 870px) {
   .grid-wrapper--about {
     grid-template-rows: 6vh 5% -webkit-max-content -webkit-max-content;
     grid-template-rows: 6vh 5% max-content max-content;
+    
+  }
+}
+
+
+@media screen and (max-width: 650px) {
+  .grid-wrapper--about {
+    width: 40%;
   }
 }
 
@@ -209,9 +219,13 @@ ul li {
   padding: 0 0% 0 0%;
   background-color: var(--background-color, #f5f5f5);
   grid-area: navtop;
-  position: -webkit-sticky;
+  /* position: -webkit-sticky; */
   position: sticky;
   z-index: 1;
+}
+
+.nav__link--position--top {
+  position: relative;
   
 }
 
@@ -253,6 +267,7 @@ ul li {
     width: 100%;
     grid-template-columns: 89vw 6vw 5vw; 
     grid-template-rows: 7vh 1.5px;
+    grid-auto-rows: 0;
     grid-template-areas: 
     "logo burger ."
     "border border border";
@@ -357,8 +372,7 @@ ul li {
   }
 
  
-  
-  .nav__point {
+  .burger-nav__overlay .nav__point {
     display: block;
   }
 
@@ -1263,7 +1277,8 @@ canvas {
 
   #pfeil {
     margin: 0 0 0 5px;
-    transform: scale(-0.7); /* negativer Wert damit Pfeil in richtige Richtung zeigt */
+    -webkit-transform: scale(-0.7);
+            transform: scale(-0.7); /* negativer Wert damit Pfeil in richtige Richtung zeigt */
     top: 45vh;
   }
   
