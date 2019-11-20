@@ -149,7 +149,13 @@ ul li {
 }
 
 .headline {
-  font-size: 1.0rem;
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 1100px) {
+  .headline {
+    font-size: 1.3rem;
+  }
 }
 
 .nav__link:visited {
