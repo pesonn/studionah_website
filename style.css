@@ -173,9 +173,9 @@ ul li {
 .nav__link::after {
   content:"";
   position: absolute;
-  display:block;
-  width: 0%;
-  left:0;
+  display: block;
+  width: 0;
+  left: 0;
   border-bottom: 2px solid var(--font-color, #000);
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -185,8 +185,7 @@ ul li {
 .nav__link:first-child:hover::after, 
 .nav__link:last-child:hover::after,
 .nav__link:hover::after {
-  width:100%;
-
+  width: 100%;
 }
 
 .nav__link:not(:first-child):not(:last-child):hover::after {
@@ -206,21 +205,14 @@ ul li {
 
 
 .nav__item--position--top {
-  height: 8vh;
-  padding: 0 50% 0 50%;
+  height: 4vh;
+  padding: 0 0% 0 0%;
   background-color: var(--background-color, #f5f5f5);
   grid-area: navtop;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1;
   
-}
-
-
-.nav__link--position--top {
-  position: relative;
-  top: 2vh;
-
 }
 
 .nav__item--position--right {
