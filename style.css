@@ -1255,6 +1255,10 @@ canvas {
   font-size: 75%;
 }
 
+.pflichtangaben p a {
+  font-size: 100%;
+}
+
 .pflichtangaben {
   width: 80vw;
   margin: 0 auto;
