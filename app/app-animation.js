@@ -8,6 +8,20 @@ var camera = new THREE.PerspectiveCamera(75, gridmain.clientWidth / gridmain.cli
 var renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize(gridmain.clientWidth, gridmain.clientHeight);
 
+renderer.setPixelRatio(1.55);
+
+gridmain.appendChild(renderer.domElement);
+
+window.addEventListener("resize", () => {
+  renderer.setSize(gridmain.clientWidth, gridmain.clientHeight);
+  camera.aspect = gridmain.clientWidth / gridmain.clientHeight;
+  
+  camera.updateProjectionMatrix();
+});
+
+
+
+/* MEDIA QUERY FÜR FARBSCHEMA */
 // setzt die Farbe beim ersten Laden der Seite
 function setInitialBackgroundColor() {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches){
@@ -29,21 +43,33 @@ window.matchMedia("(prefers-color-scheme: light)").addListener(() => {
   }
 });
 
-renderer.setPixelRatio(1.55);
-
-gridmain.appendChild(renderer.domElement);
 
 
+/* MEDIA QUERY FÜR CAMERA POSITION */
 // muss auf window bleiben, da dieses die Größe steuert
-window.addEventListener("resize", () => {
-  renderer.setSize(gridmain.clientWidth, gridmain.clientHeight);
-  camera.aspect = gridmain.clientWidth / gridmain.clientHeight;
-  
-  camera.updateProjectionMatrix();
+
+// setzt die Camera Position beim ersten Laden der Seite
+function setInitialCameraPosition() {
+  if (window.matchMedia("(max-width: 650px)").matches){
+    camera.position.z = 300;
+  }
+  else {
+    camera.position.z = 400;
+  }
+};
+setInitialCameraPosition();
+
+//ändert die Cameraposition während man auf der Seite Ist
+window.matchMedia("(max-width: 650px)").addListener(() => {
+  if (window.matchMedia("(max-width: 650px)").matches){
+    camera.position.z = 300;
+  }
+  else {
+    camera.position.z = 400;
+  }
 });
 
 
-camera.position.z = 400;
 
 // /* ORBIT CONTROLS */
 
