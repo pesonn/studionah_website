@@ -579,8 +579,8 @@ ul li {
   }
 
   .burger-fadein-1__line1 {
-    -webkit-animation: burger-fadein-1__line1 250ms ease-out forwards;
-            animation: burger-fadein-1__line1 250ms ease-out forwards 
+    -webkit-animation: burger-fadein-1__line1 80ms ease-out forwards;
+            animation: burger-fadein-1__line1 80ms ease-out forwards 
     /* animation-delay: 0.5s; */
   }
   .burger-fadein-2__line1 {
@@ -642,8 +642,8 @@ ul li {
   }
 
   .burger-fadein-1__line2 {
-    -webkit-animation: burger-fadein-1__line2 250ms ease-out forwards;
-            animation: burger-fadein-1__line2 250ms ease-out forwards;
+    -webkit-animation: burger-fadein-1__line2 80ms ease-out forwards;
+            animation: burger-fadein-1__line2 80ms ease-out forwards;
     /* animation-delay: 0.5s; */
   }
   .burger-fadein-2__line2 {
@@ -731,8 +731,8 @@ ul li {
   }
 
   .burger-fadein-1__line3 {
-    -webkit-animation: burger-fadein-1__line3 250ms ease-out forwards ;
-            animation: burger-fadein-1__line3 250ms ease-out forwards ;
+    -webkit-animation: burger-fadein-1__line3 80ms ease-out forwards ;
+            animation: burger-fadein-1__line3 80ms ease-out forwards ;
     /* animation-delay: 0.5s; */
   }
 

@@ -101,7 +101,7 @@ burgerMenuIcon.addEventListener("click", () => {
     gridNavBurger.appendChild(burgerNavOverlay);
 
     burgerNavOverlay.classList.add("overlay-fadein");
-  }, 300);
+  }, 150);
 
   window.setTimeout( () => {
     burgerMenuLines[0].classList.add("burger-fadein-2__line1");
@@ -131,13 +131,13 @@ burgerMenuIcon.addEventListener("click", () => {
     // muss getrennt laufen, da es sonst nicht funktioniert...
     window.setTimeout( () => {
       burgerOverlay.classList.remove("overlay-fadein");
-    }, 250);
+    }, 100);
 
     window.setTimeout( () => {
       burgerOverlay.classList.add("overlay-fadeout"); 
       document.body.classList.remove("--overflow--hidden"); 
       console.log("1")
-    }, 250);
+    }, 100);
 
     window.setTimeout( () => {
       burgerOverlay.classList.remove("overlay-fadeout");
@@ -148,7 +148,7 @@ burgerMenuIcon.addEventListener("click", () => {
       gridNavBurger.removeChild(burgerOverlay);
       
       console.log("2") 
-    }, 1000);
+    }, 300);
 
 
     window.setTimeout( () => {
@@ -159,14 +159,14 @@ burgerMenuIcon.addEventListener("click", () => {
       burgerMenuLines[1].classList.add("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.add("burger-fadeout-2__line3");
       console.log("3")
-    }, 1100);
+    }, 400);
 
     window.setTimeout( () => {
       burgerMenuLines[0].classList.remove("burger-fadeout-2__line1");
       burgerMenuLines[1].classList.remove("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.remove("burger-fadeout-2__line3");
       console.log("4")
-    }, 2000);
+    }, 800);
 
 
     
