@@ -131,30 +131,31 @@ burgerMenuIcon.addEventListener("click", () => {
     // muss getrennt laufen, da es sonst nicht funktioniert...
     window.setTimeout( () => {
       burgerOverlay.classList.remove("overlay-fadein");
-    }, 100);
+    }, 200);
 
     window.setTimeout( () => {
       burgerOverlay.classList.add("overlay-fadeout"); 
       document.body.classList.remove("--overflow--hidden"); 
       console.log("1")
-    }, 100);
+    }, 200);
 
     window.setTimeout( () => {
       burgerOverlay.classList.remove("overlay-fadeout");
-      gridNavBurger.appendChild(burgerMenuIcon);
+      
       gridNavBurger.appendChild(navItems[0]);
       gridNavBurger.appendChild(navItems[1]);
       gridNavBurger.appendChild(navItems[2]);
       gridNavBurger.removeChild(burgerOverlay);
       
       console.log("2") 
-    }, 300);
+    }, 250);
 
 
     window.setTimeout( () => {
       burgerMenuLines[0].classList.remove("burger-fadeout-1__line1");
       burgerMenuLines[1].classList.remove("burger-fadeout-1__line2");
       burgerMenuLines[2].classList.remove("burger-fadeout-1__line3");
+      gridNavBurger.appendChild(burgerMenuIcon);
       burgerMenuLines[0].classList.add("burger-fadeout-2__line1");
       burgerMenuLines[1].classList.add("burger-fadeout-2__line2");
       burgerMenuLines[2].classList.add("burger-fadeout-2__line3");

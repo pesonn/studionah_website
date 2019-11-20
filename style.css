@@ -809,12 +809,17 @@ ul li {
     0% {
       top: 9px;
       background-color: var(--font-color, #000);
-      visibility: hidden;
+      opacity: 0;
     }
 
-    10% {
+    49% {
       top: 9px;
-      visibility: visible;
+      opacity: 1;
+    }
+
+    50% {
+      top: 9px;
+      
     }
 
     100% {
@@ -829,8 +834,8 @@ ul li {
             animation: burger-fadeout-1__line1 200ms ease-out forwards ;
   }
   .burger-fadeout-2__line1 {
-    -webkit-animation: burger-fadeout-2__line1 0.4s ease-out forwards ;
-            animation: burger-fadeout-2__line1 0.4s ease-out forwards ;
+    -webkit-animation: burger-fadeout-2__line1 0.5s ease-out forwards ;
+            animation: burger-fadeout-2__line1 0.5s ease-out forwards ;
   }
 
   /* line2 startet bei top: 9px */
@@ -892,8 +897,8 @@ ul li {
             animation: burger-fadeout-1__line2 200ms ease-out forwards ;
   }
   .burger-fadeout-2__line2 {
-    -webkit-animation: burger-fadeout-2__line2 0.4s ease-out forwards ;
-            animation: burger-fadeout-2__line2 0.4s ease-out forwards ;
+    -webkit-animation: burger-fadeout-2__line2 0.5s ease-out forwards ;
+            animation: burger-fadeout-2__line2 0.5s ease-out forwards ;
   }
   
   /* line3 startet bei top: 15px */
@@ -940,12 +945,17 @@ ul li {
     0% {
       top: 9px;
       background-color: var(--font-color, #000);
-      visibility: hidden;
+      opacity: 0;
     }
 
-    10% {
+    49% {
       top: 9px;
-      visibility: visible;
+      opacity: 1;
+    }
+
+    50% {
+      top: 9px;
+      
     }
 
     100% {
@@ -954,31 +964,14 @@ ul li {
     }
   }
 
-  @keyframes burger-fadeout-2__line3 {
-    0% {
-      top: 9px;
-      background-color: var(--font-color, #000);
-      visibility: hidden;
-    }
-
-    10% {
-      top: 9px;
-      visibility: visible;
-    }
-
-    100% {
-      top: 15px;
-      background-color: var(--font-color, #000);
-    }
-  }
 
   .burger-fadeout-1__line3 {
     -webkit-animation: burger-fadeout-1__line3 200ms ease-out forwards ;
             animation: burger-fadeout-1__line3 200ms ease-out forwards ;
   }
   .burger-fadeout-2__line3 {
-    -webkit-animation: burger-fadeout-2__line3 0.4s ease-out forwards ;
-            animation: burger-fadeout-2__line3 0.4s ease-out forwards ;
+    -webkit-animation: burger-fadeout-2__line3 0.5s ease-out forwards ;
+            animation: burger-fadeout-2__line3 0.5s ease-out forwards ;
   }
 
 
