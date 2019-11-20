@@ -1003,7 +1003,7 @@ footer {
 }
 
 footer a {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   
 }
 
@@ -1241,14 +1241,19 @@ canvas {
 .pflichtangaben h4, 
 .pflichtangaben h5, 
 .pflichtangaben h6 {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  font-size: 100%;
+}
+
+.pflichtangaben p,
+.pflichtangaben a {
+  font-size: 75%;
 }
 
 .pflichtangaben {
-  width: 70vw;
+  width: 80vw;
   margin: 0 auto;
 }
-
 
 
 #pfeil {
@@ -1259,4 +1264,18 @@ canvas {
   bottom: 10px;
   /* Farbe wird in haupt Style geändert */
 }
+
+@media screen and (max-width: 670px) {
+  .pflichtangaben {
+    margin-left: 18%;
+  }
+
+  #pfeil {
+    margin: 0 0 0 5px;
+    transform: scale(-0.7); /* negativer Wert damit Pfeil in richtige Richtung zeigt */
+    top: 45vh;
+  }
+  
+}
+
 
