@@ -1118,6 +1118,7 @@ canvas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-self: center;
   
 }
 .einleitungstext p {
@@ -1133,7 +1134,29 @@ canvas {
   .einleitungstext p {
     text-align: justify;
   }
+
 }
+
+@media screen and (max-width: 600px) {
+  .einleitungstext p {
+    text-align: justify;
+    font-size: 3vw;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  .einleitungstext p {
+    text-align: justify;
+    font-size: 4vw;
+    width: 96%;
+  }
+
+  .einleitungstext {
+    justify-self: center;
+  }
+}
+
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
