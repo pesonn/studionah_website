@@ -7,7 +7,7 @@
   font-size: 90%;
   
 }
-
+/* ACHTUNG: BEIM ÄNDERN DER VARIABELN AUCH AN DIE FALLBACKS IM CODE DENKEN!*/
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #f5f5f5;
@@ -39,6 +39,7 @@ body {
   height: 100%;
   width: 99%;
   min-width: 300px;
+  background-color: #f5f5f5;
   background-color: var(--background-color, #f5f5f5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -52,6 +53,7 @@ h1, h2, h3, h4, h5, h6, a, p, li {
   font-family: termina, Helvetica, Arial, sans-serif;
   font-size: normal;
   font-weight: 500;
+  color: #000;
   color: var(--font-color, #000);
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -70,6 +72,7 @@ ul li {
 
 
 .pfeil_back .cls-1 {
+  stroke: #000;
   stroke: var(--font-color, #000);
 }
 
@@ -169,6 +172,7 @@ ul li {
 }
 
 .nav__link:visited {
+  color: #000;
   color: var(--font-color, #000);
 }
 
@@ -186,6 +190,7 @@ ul li {
   display: block;
   width: 0;
   left: 0;
+  border-bottom: 2px solid #000;
   border-bottom: 2px solid var(--font-color, #000);
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
@@ -217,6 +222,7 @@ ul li {
 .nav__item--position--top {
   height: 4vh;
   padding: 0 0% 0 0%;
+  background-color: #f5f5f5;
   background-color: var(--background-color, #f5f5f5);
   grid-area: navtop;
   /* position: -webkit-sticky; */
@@ -298,6 +304,7 @@ ul li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background-color: #f5f5f5;        
     background-color: var(--background-color, #f5f5f5);
     height: 100%;
     width: 100%;
@@ -313,6 +320,7 @@ ul li {
     grid-row: 2;
     width: 100%;
     height: 100%;
+    background-color: #e0e0e0;
     background-color: var(--border-color, #e0e0e0);
   }
 
@@ -328,6 +336,7 @@ ul li {
   .burger-menu .line {
     width: 25px;
     height: 2px;
+    background-color: #f5f5f5;
     background-color: var(--font-color, #f5f5f5);
     position: absolute;
   }
@@ -354,6 +363,7 @@ ul li {
     width: 100vh;
     height: 100vh;
     overflow: hidden;
+    background-color: #1a1919fa;
     background-color: var(--overlay-background-color,#1a1919fa);
     grid-template-rows: 7vh 2px 21% repeat(3, 10%) 40%;
     grid-template-areas: 
@@ -408,11 +418,13 @@ ul li {
   }
 
   .burger-nav__overlay .nav__link {
+    color: #f5f5f5;
     color: var(--overlay-font-color, #f5f5f5);
     font-size: 2rem;
   }
 
   .nav__link::after {
+    border-bottom: 2px solid #f5f5f5;
     border-bottom: 2px solid var(--overlay-font-color, #f5f5f5);
   }
 
@@ -544,6 +556,7 @@ ul li {
     0% {
       top: 9px;
       opacity: 0;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
@@ -561,6 +574,7 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
     
@@ -570,6 +584,7 @@ ul li {
     0% {
       top: 9px;
       opacity: 0;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
@@ -587,6 +602,7 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
     
@@ -696,6 +712,7 @@ ul li {
     0% {
       top: 9px;
       opacity: 0;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
@@ -713,6 +730,7 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
     
@@ -722,6 +740,7 @@ ul li {
     0% {
       top: 9px;
       opacity: 0;
+      background-color:  #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
@@ -739,6 +758,7 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
     
@@ -764,10 +784,12 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     50% {
+      background-color: #f5f5f5;      
       background-color: var(--overlay-font-color, #f5f5f5);
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -775,6 +797,7 @@ ul li {
 
     100% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       visibility: hidden;
     }
@@ -784,10 +807,12 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
+      background-color: #f5f5f5;             
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     50% {
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -795,6 +820,7 @@ ul li {
 
     100% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       visibility: hidden;
     }
@@ -803,6 +829,7 @@ ul li {
   @-webkit-keyframes burger-fadeout-2__line1 {
     0% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       visibility: hidden;
     }
@@ -814,6 +841,7 @@ ul li {
 
     100% {
       top: 3px;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
     
@@ -822,6 +850,7 @@ ul li {
   @keyframes burger-fadeout-2__line1 {
     0% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       opacity: 0;
     }
@@ -838,6 +867,7 @@ ul li {
 
     100% {
       top: 3px;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
     
@@ -856,22 +886,26 @@ ul li {
   @-webkit-keyframes burger-fadeout-1__line2 {
     0% {
       visibility: hidden;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     100% {
       visibility: hidden;
+      background-color:  #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
   }
   @keyframes burger-fadeout-1__line2 {
     0% {
       visibility: hidden;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     100% {
       visibility: hidden;
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
     }
   }  
@@ -880,12 +914,14 @@ ul li {
     0% {
       top: 9px;
       visibility: hidden;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
 
     100% {
       top: 9px;
       visibility: visible;
+      background-color:  #000;
       background-color: var(--font-color, #000);
     }
     
@@ -895,12 +931,14 @@ ul li {
     0% {
       top: 9px;
       visibility: hidden;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
 
     100% {
       top: 9px;
       visibility: visible;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
     
@@ -921,10 +959,12 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
+      background-color: #f5f5f5;              
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     50% {
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -940,10 +980,12 @@ ul li {
       top: 9px;
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg);
+      background-color: #f5f5f5;        
       background-color: var(--overlay-font-color, #f5f5f5);
     }
 
     50% {
+      background-color: #f5f5f5;
       background-color: var(--overlay-font-color, #f5f5f5);
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -958,6 +1000,7 @@ ul li {
  @keyframes burger-fadeout-2__line3 {
     0% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       opacity: 0;
     }
@@ -974,6 +1017,7 @@ ul li {
 
     100% {
       top: 15px;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
   }
@@ -981,6 +1025,7 @@ ul li {
   @-webkit-keyframes burger-fadeout-2__line3 {
     0% {
       top: 9px;
+      background-color: #000;
       background-color: var(--font-color, #000);
       opacity: 0;
     }
@@ -997,6 +1042,7 @@ ul li {
 
     100% {
       top: 15px;
+      background-color: #000;
       background-color: var(--font-color, #000);
     }
   }
@@ -1056,7 +1102,8 @@ footer a {
 }
 
 .burger-nav__overlay .footer a{
-  color: var(--overlay-font-color, #f5f5f5)
+  color: #f5f5f5;
+  color: var(--overlay-font-color, #f5f5f5);
 }
 
 /* damit footer am Handy nicht zu sehr ans untere Ende gequetscht ist */
