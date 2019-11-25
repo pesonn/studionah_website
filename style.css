@@ -122,8 +122,8 @@ ul li {
 }
 
 .grid-wrapper--about {
-  grid-template-rows: 6vh 5% 75vh -webkit-max-content;
-  grid-template-rows: 6vh 5% 75vh max-content;
+  grid-template-rows: 6vh 5% -webkit-max-content -webkit-max-content;
+  grid-template-rows: 6vh 5% max-content max-content;
   grid-template-areas: 
   ". . . . ."
   ". . . . ."
@@ -132,15 +132,6 @@ ul li {
   ". . . footer footer"; 
 } 
 
-
-
-@media screen and (max-width: 870px) {
-  .grid-wrapper--about {
-    grid-template-rows: 6vh 5% -webkit-max-content -webkit-max-content;
-    grid-template-rows: 6vh 5% max-content max-content;
-    
-  }
-}
 
 
 @media screen and (max-width: 650px) {
