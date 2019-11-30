@@ -1194,9 +1194,15 @@ canvas {
   /* padding: 0 5vw 0 5vw;
   margin: 0 auto; */
   /* max-width: 920px; */
-  font-size: 1.0rem;
+  font-size: 1.5vw;
   text-align: center;
   
+}
+
+@media screen and (max-width: 1100px) {
+  .einleitungstext p {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 770px) {
